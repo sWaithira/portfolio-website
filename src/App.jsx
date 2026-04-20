@@ -23,7 +23,7 @@ const projects = [
     href: "https://how-old-kappa.vercel.app/",
   },
   {
-    id: "03",
+    id: "02",
     filename: "flood-risk-system",
     title: "Urban Flood Risk System",
     desc: "Mapping and predicting urban flood risk in Kenyan cities. Security-aware architecture from line one — because infrastructure data demands it.",
@@ -34,7 +34,7 @@ const projects = [
     tag: null,
   },
   {
-    id: "04",
+    id: "03",
     filename: "hesabu",
     ext: ".ke",
     title: "Hesabu - Kenyan Financial Tools",
@@ -46,7 +46,7 @@ const projects = [
     href: "https://pesatrack.tech",
   },
   {
-    id: "05",
+    id: "04",
     filename: "creative-marketplace",
     title: "Creative Economy Marketplace",
     desc: null,
