@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 
 const projects = [
   {
-    id: "01",
+    id: "02",
     filename: "howOld",
     title: "howOld - Life Metrics Dashboard",
     desc: "Enter your birthdate and confront your existence. Exact age, planetary ages, generational identity with cultural context, four thousand weeks by Oliver Burkeman — all in a post-apocalyptic cyberpunk dashboard with a rotating 3D globe and live ticking numbers. Download your shareable life card.",
@@ -23,7 +23,7 @@ const projects = [
     href: "https://how-old-kappa.vercel.app/",
   },
   {
-    id: "02",
+    id: "03",
     filename: "flood-risk-system",
     title: "Urban Flood Risk System",
     desc: "Mapping and predicting urban flood risk in Kenyan cities. Security-aware architecture from line one — because infrastructure data demands it.",
@@ -34,7 +34,7 @@ const projects = [
     tag: null,
   },
   {
-    id: "03",
+    id: "01",
     filename: "hesabu",
     ext: ".ke",
     title: "Hesabu - Kenyan Financial Tools",
