@@ -734,7 +734,6 @@
     padding: 1.5rem 16px;
     background: rgba(11, 23, 18, 0.98);
     border-bottom: 1px solid var(--border);
-
     display: none;
     flex-direction: column;
     align-items: flex-start;
@@ -773,15 +772,31 @@
   }
 
   .hero-name {
+    width: 100%;
     max-width: 100%;
-    font-size: clamp(3.6rem, 18vw, 5.5rem);
-    line-height: 0.82;
-    overflow-wrap: break-word;
+    margin: 1.5rem 0;
+    font-size: clamp(3.2rem, 15vw, 5rem);
+    line-height: 0.88;
+    letter-spacing: -0.05em;
+    overflow: visible;
+  }
+
+  .hero-name span {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+  }
+
+  .hero-name span:last-child {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--rose);
   }
 
   .hero-title {
     max-width: 100%;
     font-size: clamp(1.7rem, 6vw, 2.3rem);
+    line-height: 1.05;
   }
 
   .hero-description {
@@ -828,6 +843,19 @@
     grid-template-columns: 1fr;
   }
 
+  .currently-list,
+  .skill-list,
+  .project-stack {
+    max-width: 100%;
+  }
+
+  .currently-list span,
+  .skill-list span,
+  .project-stack span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -838,22 +866,10 @@
 
   .project-card {
     min-height: 350px;
+    min-width: 0;
   }
 
   .project-description {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-  }
-
-  .project-stack,
-  .skill-list,
-  .currently-list {
-    max-width: 100%;
-  }
-
-  .project-stack span,
-  .skill-list span,
-  .currently-list span {
     max-width: 100%;
     overflow-wrap: anywhere;
   }
@@ -892,7 +908,17 @@
   }
 
   .hero-name {
-    font-size: clamp(3.6rem, 18vw, 5.5rem);
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(3rem, 15vw, 4.8rem);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+  }
+
+  .hero-name span {
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
   }
 
   .hero-title {
@@ -910,6 +936,8 @@
   }
 
   .profile-frame {
+    width: 100%;
+    max-width: 100%;
     padding: 7px;
   }
 
