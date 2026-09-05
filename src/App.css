@@ -720,23 +720,75 @@
   }
 }
 
-@media (max-width: 650px) {
-  .content-width,
-  .hero-grid,
+@media (max-width: 900px) {
   .nav-inner {
-    width: min(100% - 32px, 1180px);
+    width: calc(100% - 32px);
+    min-height: 68px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 16px;
+    background: rgba(11, 23, 18, 0.98);
+    border-bottom: 1px solid var(--border);
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .hero {
+    width: 100%;
+    padding: 120px 0 70px;
+  }
+
+  .hero-grid {
+    width: calc(100% - 32px);
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .hero-copy,
+  .profile-frame,
+  .about-text,
+  .currently-card,
+  .skill-card,
+  .project-card,
+  .contact-inner {
+    min-width: 0;
+    max-width: 100%;
   }
 
   .hero-name {
-    font-size: clamp(4rem, 20vw, 6.5rem);
+    max-width: 100%;
+    font-size: clamp(3.6rem, 18vw, 5.5rem);
+    line-height: 0.82;
+    overflow-wrap: break-word;
   }
 
   .hero-title {
-    font-size: 1.8rem;
+    max-width: 100%;
+    font-size: clamp(1.7rem, 6vw, 2.3rem);
   }
 
   .hero-description {
+    max-width: 100%;
     font-size: 0.7rem;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
   }
 
   .hero-actions {
@@ -745,8 +797,35 @@
     gap: 1rem;
   }
 
+  .profile-frame {
+    width: 100%;
+    max-width: 500px;
+    justify-self: start;
+  }
+
+  .section-heading-row,
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   .section-title {
-    font-size: 3.3rem;
+    max-width: 100%;
+    font-size: clamp(3rem, 13vw, 4.5rem);
+    overflow-wrap: break-word;
+  }
+
+  .section-intro {
+    max-width: 100%;
+  }
+
+  .experience {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .projects-grid {
@@ -761,8 +840,108 @@
     min-height: 350px;
   }
 
-  .project-top {
-    margin-bottom: 3rem;
+  .project-description {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .project-stack,
+  .skill-list,
+  .currently-list {
+    max-width: 100%;
+  }
+
+  .project-stack span,
+  .skill-list span,
+  .currently-list span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-title {
+    max-width: 100%;
+    font-size: clamp(3.2rem, 14vw, 5rem);
+    overflow-wrap: break-word;
+  }
+
+  .contact-description {
+    max-width: 100%;
+  }
+
+  .email-link {
+    max-width: 100%;
+    font-size: clamp(1.35rem, 6vw, 2rem);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .social-links {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .content-width,
+  .hero-grid,
+  .nav-inner {
+    width: calc(100% - 32px);
+  }
+
+  .hero {
+    padding-top: 105px;
+  }
+
+  .hero-name {
+    font-size: clamp(3.6rem, 18vw, 5.5rem);
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    line-height: 1.05;
+  }
+
+  .hero-description {
+    font-size: 0.68rem;
+    line-height: 1.85;
+  }
+
+  .button-primary {
+    width: fit-content;
+  }
+
+  .profile-frame {
+    padding: 7px;
+  }
+
+  .profile-location {
+    padding: 0.8rem 0.25rem 0.15rem;
+  }
+
+  .profile-location span {
+    font-size: 0.57rem;
+  }
+
+  .profile-location small {
+    font-size: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .section {
+    overflow: hidden;
+  }
+
+  .section-title {
+    font-size: clamp(3rem, 14vw, 4rem);
+  }
+
+  .about-section,
+  .skills-section,
+  .work-section {
+    padding: 85px 0;
+  }
+
+  .contact-section {
+    padding: 95px 0;
   }
 
   .experience-item {
@@ -770,17 +949,45 @@
     gap: 0.5rem;
   }
 
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
+  .experience-date {
+    font-size: 0.58rem;
+  }
+
+  .project-card {
+    min-height: 330px;
+    padding: 1.25rem;
+  }
+
+  .project-top {
+    margin-bottom: 2.8rem;
+  }
+
+  .project-card h3 {
+    font-size: 2.4rem;
   }
 
   .contact-title {
-    font-size: 3.5rem;
+    font-size: clamp(3.2rem, 15vw, 4.5rem);
   }
 
-  .email-link {
-    font-size: 1.5rem;
-    overflow-wrap: anywhere;
+  .social-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .social-links a {
+    justify-content: center;
+  }
+
+  .footer {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .back-to-top {
+    right: 1rem;
+    bottom: 1rem;
   }
 }

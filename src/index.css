@@ -24,6 +24,11 @@
   --font-heading: "Syne", sans-serif;
   --font-mono: "DM Mono", monospace;
 }
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
 
 * {
   margin: 0;
@@ -39,6 +44,8 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  width: 100%;
+  max-width: 100%;
   background: var(--bg);
   color: var(--cream);
   overflow-x: hidden;
