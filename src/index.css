@@ -1,33 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --bg: #0b1712;
-  --surface: #10231b;
+  --bg: #0b0b0b;
+  --surface: #141414;
+  --surface-light: #1b1b1b;
 
-  --green: #315c47;
-  --green-light: #527763;
+  --cream: #f4f1ea;
+  --muted: #9a9a9a;
 
-  --rose: #c9828c;
-  --rose-light: #dfa9ae;
+  --accent: #8f3d4a;
+  --accent-light: #b86570;
 
-  --cream: #f3e9dc;
-  --muted: #91a197;
-
-  --border: rgba(243, 233, 220, 0.1);
-  --rose-border: rgba(201, 130, 140, 0.42);
+  --border: rgba(244, 241, 234, 0.12);
+  --accent-border: rgba(143, 61, 74, 0.5);
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-heading: "Syne", sans-serif;
   --font-mono: "DM Mono", monospace;
-}
-#root {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: clip;
 }
 
 * {
@@ -38,33 +31,32 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--bg);
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  width: 100%;
-  max-width: 100%;
   background: var(--bg);
   color: var(--cream);
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
 }
 
 img {
   max-width: 100%;
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 ::selection {
-  background: rgba(201, 130, 140, 0.3);
+  background: rgba(143, 61, 74, 0.35);
   color: var(--cream);
 }
 
@@ -77,28 +69,21 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--green);
-  border-radius: 10px;
+  background: var(--accent);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--rose);
-}
-
-a {
-  -webkit-tap-highlight-color: transparent;
+  background: var(--accent-light);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   *,
   *::before,
   *::after {
-    animation-duration: 0.02ms !important;
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.02ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
