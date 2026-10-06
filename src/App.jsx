@@ -29,7 +29,6 @@ import {
 } from "react-icons/si";
 import { useEffect, useRef, useState } from "react";
 
-
 const projects = [
   {
     id: "01",
@@ -73,7 +72,6 @@ const projects = [
   },
 ];
 
-
 const technologies = [
   { name: "Java", icon: FaJava },
   { name: "Spring Boot", icon: SiSpringboot },
@@ -92,7 +90,6 @@ const technologies = [
   { name: "Tailwind CSS", icon: SiTailwindcss },
   { name: "REST APIs", icon: null },
 ];
-
 
 function Reveal({ children, delay = 0, className = "" }) {
   const ref = useRef(null);
@@ -130,15 +127,9 @@ function Reveal({ children, delay = 0, className = "" }) {
   );
 }
 
-
 function SectionLabel({ children }) {
-  return (
-    <div className="section-label">
-      {children}
-    </div>
-  );
+  return <div className="section-label">{children}</div>;
 }
-
 
 function TechnologyCard({ name, icon: Icon }) {
   return (
@@ -151,7 +142,6 @@ function TechnologyCard({ name, icon: Icon }) {
     </div>
   );
 }
-
 
 function ProjectCard({ project }) {
   return (
@@ -196,7 +186,6 @@ function ProjectCard({ project }) {
   );
 }
 
-
 export default function App() {
   const [showTop, setShowTop] = useState(false);
 
@@ -219,7 +208,6 @@ export default function App() {
 
   return (
     <div className="site">
-
       <nav className="navbar">
         <div className="nav-inner">
           <a href="#home" className="brand">
@@ -228,15 +216,11 @@ export default function App() {
         </div>
       </nav>
 
-
-
       <main>
         <section className="hero" id="home">
           <div className="hero-grid">
             <Reveal className="hero-copy">
-              <div className="eyebrow">
-                Software Engineering
-              </div>
+              <div className="eyebrow">Software Engineer</div>
 
               <h1 className="hero-name">
                 <span>Susan</span>
@@ -261,9 +245,9 @@ export default function App() {
                 </a>
 
                 <a
-                  href="/Susan_Nyawira_CV.pdf"
+                  href="/Susan_Waithira_CV.pdf"
                   className="text-button"
-                  download>
+                  download="Susan_Nyawira_CV.pdf">
                   Download CV
                   <Download size={15} />
                 </a>
@@ -291,7 +275,6 @@ export default function App() {
             </Reveal>
           </div>
         </section>
-
 
         <section className="about-section section" id="about">
           <div className="content-width">
@@ -369,13 +352,10 @@ export default function App() {
               </Reveal>
             </div>
 
-
             <Reveal className="technologies-section-inner">
               <SectionLabel>Technologies</SectionLabel>
 
-              <h2 className="section-title technology-heading">
-                Tools
-              </h2>
+              <h2 className="section-title technology-heading">Tools</h2>
 
               <div className="technology-grid">
                 {technologies.map((technology) => (
@@ -392,7 +372,6 @@ export default function App() {
               <SectionLabel>Selected Work</SectionLabel>
 
               <div className="section-heading-row work-heading">
-
                 <p className="section-intro">
                   A selection of systems, applications and experiments I've
                   worked on.
@@ -409,7 +388,6 @@ export default function App() {
             </div>
           </div>
         </section>
-
 
         <section className="contact-section section" id="contact">
           <div className="contact-inner">
@@ -458,12 +436,10 @@ export default function App() {
         </section>
       </main>
 
-
       <footer className="footer">
         <span>© 2026 Susan Nyawira</span>
         <span>Software Engineer</span>
       </footer>
-
 
       <button
         className={`back-to-top ${showTop ? "visible" : ""}`}
