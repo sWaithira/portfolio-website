@@ -245,9 +245,9 @@ export default function App() {
                 </a>
 
                 <a
-                  href="/Susan_Waithira_CV.pdf"
+                  href="/Susan-Waithira-Nyawira.pdf"
                   className="text-button"
-                  download="Susan_Nyawira_CV.pdf">
+                  download="Susan-Waithira-Nyawira-CV.pdf">
                   Download CV
                   <Download size={15} />
                 </a>
